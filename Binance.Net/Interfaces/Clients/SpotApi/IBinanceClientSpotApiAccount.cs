@@ -21,7 +21,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
     {
         /// <summary>
         /// Gets account information, including balances
+        /// 账户信息 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#account-information-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-21" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -30,7 +32,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get a daily account snapshot (balances)
+        /// 查询每日现货账户资产快照 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#daily-account-snapshot-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-2" /></para>
         /// </summary>
         /// <param name="startTime">The start time</param>
         /// <param name="endTime">The end time</param>
@@ -44,7 +48,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get a daily account snapshot (assets)
+        /// 查询每日保证金账户资产快照 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#daily-account-snapshot-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-2" /></para>
         /// </summary>
         /// <param name="startTime">The start time</param>
         /// <param name="endTime">The end time</param>
@@ -58,7 +64,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get a daily account snapshot (assets and positions)
+        /// 查询每日合约账户资产快照 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#daily-account-snapshot-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-2" /></para>
         /// </summary>
         /// <param name="startTime">The start time</param>
         /// <param name="endTime">The end time</param>
@@ -72,7 +80,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets the status of the account associated with the api key/secret
+        /// 账户状态 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#account-status-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-9" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -81,7 +91,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get funding wallet assets
+        /// 资金账户 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#funding-wallet-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-16" /></para>
         /// </summary>
         /// <param name="asset">Filter by asset</param>
         /// <param name="needBtcValuation">Return BTC valuation</param>
@@ -92,7 +104,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get permission info for the current API key
+        /// 查询用户API Key权限 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-api-key-permission-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#api-key-user_data" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -101,7 +115,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets information of assets for a user
+        /// 获取所有币信息 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#all-coins-39-information-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -110,7 +126,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Retrieve balance info
+        /// 用户持仓 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#user-asset-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-17" /></para>
         /// </summary>
         /// <param name="asset">Return for this asset</param>
         /// <param name="needBtcValuation">Whether the response should include the BtcValuation. If false (default) BtcValuation will be 0.</param>
@@ -121,7 +139,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
         
         /// <summary>
         /// Get asset dividend records
+        /// 资产利息记录 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#asset-dividend-record-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-11" /></para>
         /// </summary>
         /// <param name="asset">Filter by asset</param>
         /// <param name="startTime">Filter by start time from</param>
@@ -135,7 +155,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
         /// <summary>
         /// This request will disable fastwithdraw switch under your account.
         /// You need to enable "trade" option for the api key which requests this endpoint.
+        /// 关闭站内划转 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#disable-fast-withdraw-switch-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-3" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -148,7 +170,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
         ///
         /// When Fast Withdraw Switch is on, transferring funds to a Binance account will be done instantly.
         /// There is no on-chain transaction, no transaction ID and no withdrawal fee.
+        /// 开启站内划转 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#enable-fast-withdraw-switch-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-4" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -157,7 +181,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets the history of dust conversions
+        /// 小额资产转换BNB历史 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#dustlog-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#bnb-user_data" /></para>
         /// </summary>
         /// <param name="startTime">The start time</param>
         /// <param name="endTime">The end time</param>
@@ -168,6 +194,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get assets that can be converted to BNB
+        /// 获取可以转换成BNB的小额资产 (USER_DATA)
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-assets-that-can-be-converted-into-bnb-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#bnb-user_data-2" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -176,7 +205,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Converts dust (small amounts of) assets to BNB 
+        /// 小额资产转换BNB历史 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#dust-transfer-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#bnb-user_data" /></para>
         /// </summary>
         /// <param name="assets">The assets to convert to BNB</param>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -186,7 +217,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets the status of the BNB burn switch for spot trading and margin interest
+        /// 获取BNB抵扣开关状态 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-bnb-burn-status-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#bnb-user_data-4" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -195,7 +228,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Sets the status of the BNB burn switch for spot trading and margin interest
+        /// 现货交易和杠杆利息BNB抵扣开关(USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#toggle-bnb-burn-on-spot-trade-and-margin-interest-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#bnb-user_data-3" /></para>
         /// </summary>
         /// <param name="spotTrading">If BNB burning should be enabled for spot trading</param>
         /// <param name="marginInterest">If BNB burning should be enabled for margin interest</param>
@@ -206,7 +241,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Transfers between accounts
+        /// 用户万向划转 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#user-universal-transfer-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-14" /></para>
         /// </summary>
         /// <param name="type">The type of transfer</param>
         /// <param name="asset">The asset to transfer</param>
@@ -220,7 +257,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get transfer history
+        /// 查询用户万向划转历史 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-user-universal-transfer-history-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-15" /></para>
         /// </summary>
         /// <param name="type">The type of transfer</param>
         /// <param name="startTime">Filter by startTime</param>
@@ -234,7 +273,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get Fiat payment history
+        /// 获取法币支付历史记录 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-fiat-payments-history-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-108" /></para>
         /// </summary>
         /// <param name="side">Filter by side</param>
         /// <param name="startTime">Filter by start time</param>
@@ -248,7 +289,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get Fiat deposit/withdrawal history
+        /// 获取法币充值/提现历史记录 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#fiat-endpoints" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-107" /></para>
         /// </summary>
         /// <param name="side">Filter by side</param>
         /// <param name="startTime">Filter by start time</param>
@@ -262,7 +305,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Starts a user stream by requesting a listen key. This listen key can be used in subsequent requests to BinanceSocketClient.Futures.SubscribeToUserDataUpdates. The stream will close after 60 minutes unless a keep alive is send.
+        /// 生成现货 Listen Key (USER_STREAM)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-spot" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key" /></para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns>Listen key</returns>
@@ -270,7 +315,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Sends a keep alive for the current user stream listen key to keep the stream from closing. Stream auto closes after 60 minutes if no keep alive is send. 30 minute interval for keep alive is recommended.
+        /// 延长现货 Listen Key 有效期 (USER_STREAM)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-spot" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key" /></para>
         /// </summary>
         /// <param name="listenKey">The listen key to keep alive</param>
         /// <param name="ct">Cancellation token</param>
@@ -279,7 +326,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Stops the current user stream
+        /// 关闭现货 Listen Key (USER_STREAM)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-spot" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key" /></para>
         /// </summary>
         /// <param name="listenKey">The listen key to keep alive</param>
         /// <param name="ct">Cancellation token</param>
@@ -288,7 +337,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Withdraw assets from Binance to an address
+        /// 提币 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#withdraw-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-5" /></para>
         /// </summary>
         /// <param name="asset">The asset to withdraw</param>
         /// <param name="address">The address to send the funds to</param>
@@ -306,7 +357,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets the withdrawal history
+        /// 获取提币历史 (支持多网络) (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#withdraw-history-supporting-network-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-7" /></para>
         /// </summary>
         /// <param name="asset">Filter by asset</param>
         /// <param name="withdrawOrderId">Filter by withdraw order id</param>
@@ -322,7 +375,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets the deposit history
+        /// 获取充值历史(支持多网络) (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#deposit-history-supporting-network-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-6" /></para>
         /// </summary>
         /// <param name="asset">Filter by asset</param>
         /// <param name="status">Filter by status</param>
@@ -337,7 +392,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets the deposit address for an asset
+        /// 获取充值地址 (支持多网络) (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#deposit-address-supporting-network-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-8" /></para>
         /// </summary>
         /// <param name="asset">Asset to get address for</param>
         /// <param name="network">Network</param>
@@ -358,7 +415,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Execute transfer between spot account and cross margin account.
+        /// 全仓杠杆账户划转 (MARGIN)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#margin-5" /></para>
         /// </summary>
         /// <param name="asset">The asset being transferred, e.g., BTC</param>
         /// <param name="quantity">The quantity to be transferred</param>
@@ -370,7 +429,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Borrow. Apply for a loan. 
+        /// 杠杆账户借贷 (MARGIN)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-borrow-margin" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#margin-6" /></para>
         /// </summary>
         /// <param name="asset">The asset being borrow, e.g., BTC</param>
         /// <param name="quantity">The quantity to be borrow</param>
@@ -383,7 +444,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Repay loan for margin account.
+        /// 杠杆账户归还借贷 (MARGIN)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-repay-margin" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#margin-7" /></para>
         /// </summary>
         /// <param name="asset">The asset being repay, e.g., BTC</param>
         /// <param name="quantity">The quantity to be borrow</param>
@@ -396,7 +459,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets the history of margin dust conversions
+        /// 杠杆小额资产转换BNB历史 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-dustlog-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#bnb-user_data-5" /></para>
         /// </summary>
         /// <param name="startTime">The start time</param>
         /// <param name="endTime">The end time</param>
@@ -407,7 +472,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get history of transfers
+        /// 杠杆账户撤销单一交易对的所有挂单 (TRADE)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-cancel-all-open-orders-on-a-symbol-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-9" /></para>
         /// </summary>
         /// <param name="direction">The direction of the the transfers to retrieve</param>
         /// <param name="page">Results page</param>
@@ -421,7 +488,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Query loan records
+        /// 查询借贷记录 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-loan-record-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-24" /></para>
         /// </summary>
         /// <param name="asset">The records asset</param>
         /// <param name="transactionId">The id of loan transaction</param>
@@ -438,7 +507,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Query repay records
+        /// 查询还贷记录 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-repay-record-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-25" /></para>
         /// </summary>
         /// <param name="asset">The records asset</param>
         /// <param name="transactionId">The id of repay transaction</param>
@@ -455,7 +526,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get history of interest
+        /// 获取利息历史 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-interest-history-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-26" /></para>
         /// </summary>
         /// <param name="asset">Filter by asset</param>
         /// <param name="page">Results page</param>
@@ -471,7 +544,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get history of interest rate
+        /// 获取杠杆利率历史 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-interest-rate-history-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-40" /></para>
         /// </summary>
         /// <param name="asset">Filter by asset</param>
         /// <param name="vipLevel">Vip level</param>
@@ -485,7 +560,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get cross margin interest data
+        /// 获取全仓杠杆利率及限额 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-cross-margin-fee-data-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-41" /></para>
         /// </summary>
         /// <param name="asset">Filter by asset</param>
         /// <param name="vipLevel">Vip level</param>
@@ -496,7 +573,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get history of forced liquidations
+        /// 获取账户强制平仓记录(USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-force-liquidation-record-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-27" /></para>
         /// </summary>
         /// <param name="page">Results page</param>
         /// <param name="startTime">Filter by startTime from</param>
@@ -510,7 +589,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Query margin account details
+        /// 查询全仓杠杆账户详情 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-cross-margin-account-details-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-28" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -519,7 +600,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Query max borrow quantity
+        /// 查询账户最大可借贷额度(USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-max-borrow-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-33" /></para>
         /// </summary>
         /// <param name="asset">The records asset</param>
         /// <param name="isolatedSymbol">The isolated symbol</param>
@@ -530,7 +613,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Query max transfer-out quantity 
+        /// 查询最大可转出额 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-max-transfer-out-amount-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-34" /></para>
         /// </summary>
         /// <param name="asset">The records asset</param>
         /// <param name="isolatedSymbol">The isolated symbol</param>
@@ -552,7 +637,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get history of transfer to and from the isolated margin account
+        /// 获取杠杆逐仓划转历史 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-isolated-margin-transfer-history-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-35" /></para>
         /// </summary>
         /// <param name="symbol">The symbol</param>
         /// <param name="asset">Filter by asset</param>
@@ -572,7 +659,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Isolated margin account info
+        /// 查询杠杆逐仓账户信息 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-isolated-margin-account-info-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-36" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -582,7 +671,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get max number of enabled isolated margin accounts
+        /// 查询杠杆逐仓账户启用限制 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-enabled-isolated-margin-account-limit-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-37" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -592,7 +683,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Enable an isolated margin account
+        /// 杠杆逐仓账户启用 (TRADE)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#enable-isolated-margin-account-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-11" /></para>
         /// </summary>
         /// <param name="symbol">Symbol to enable isoldated margin account for</param>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -602,7 +695,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Disabled an isolated margin account info
+        /// 杠杆逐仓账户停用 (TRADE)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#disable-isolated-margin-account-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-10" /></para>
         /// </summary>
         /// <param name="symbol">Symbol to enable isoldated margin account for</param>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -613,7 +708,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Transfer from or to isolated margin account
+        /// 杠杆逐仓账户划转 (MARGIN)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#isolated-margin-account-transfer-margin" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#margin-8" /></para>
         /// </summary>
         /// <param name="asset">The asset</param>
         /// <param name="symbol">Isolated symbol</param>
@@ -637,7 +734,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Starts a user stream by requesting a listen key. This listen key can be used in subsequent requests to BinanceSocketClient.Futures.SubscribeToUserDataUpdates. The stream will close after 60 minutes unless a keep alive is send.
+        /// 生成杠杆账户 ListenKey (USER_STREAM)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-margin" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key-2" /></para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns>Listen key</returns>
@@ -645,7 +744,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Sends a keep alive for the current user stream listen key to keep the stream from closing. Stream auto closes after 60 minutes if no keep alive is send. 30 minute interval for keep alive is recommended.
+        /// 延长杠杆账户 ListenKey (USER_STREAM)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-margin" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key-2" /></para>
         /// </summary>
         /// <param name="listenKey">The listen key to keep alive</param>
         /// <param name="ct">Cancellation token</param>
@@ -654,7 +755,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Stops the current user stream
+        /// 关闭杠杆账户 ListenKey (USER_STREAM)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-margin" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key-2" /></para>
         /// </summary>
         /// <param name="listenKey">The listen key to keep alive</param>
         /// <param name="ct">Cancellation token</param>
@@ -665,7 +768,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
         /// Starts a user stream  for margin account by requesting a listen key. 
         /// This listen key can be used in subsequent requests to  BinanceSocketClient.Spot.SubscribeToUserDataUpdates  
         /// The stream will close after 60 minutes unless a keep alive is send.
+        /// 生成逐仓杠杆账户 ListenKey (USER_STREAM)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-isolated-margin" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key-3" /></para>
         /// </summary>
         /// <param name="symbol">The isolated symbol</param>
         /// <param name="ct">Cancellation token</param>
@@ -675,7 +780,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
         /// <summary>
         /// Sends a keep alive for the current user stream for margin account listen key to keep the stream from closing. 
         /// Stream auto closes after 60 minutes if no keep alive is send. 30 minute interval for keep alive is recommended.
+        /// 延长逐仓杠杆账户 ListenKey (USER_STREAM)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-isolated-margin" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key-3" /></para>
         /// </summary>
         /// <param name="symbol">The isolated symbol</param>
         /// <param name="listenKey">The listen key to keep alive</param>
@@ -685,7 +792,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Close the user stream for margin account
+        /// 关闭逐仓杠杆账户 ListenKey (USER_STREAM)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-isolated-margin" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key-3" /></para>
         /// </summary>
         /// <param name="symbol">The isolated symbol</param>
         /// <param name="listenKey">The listen key to keep alive</param>
@@ -695,7 +804,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets the trading status for the current account
+        /// 账户API交易状态(USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#account-api-trading-status-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#api-user_data" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -704,7 +815,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get the current used order rate limits
+        /// 查询目前下单数 (TRADE)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-current-order-count-usage-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-6" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -713,7 +826,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get rebate history
+        /// 获取现货返佣历史记录 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-spot-rebate-history-records-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-111" /></para>
         /// </summary>
         /// <param name="startTime">Filter by start time</param>
         /// <param name="endTime">Filter by end time</param>
@@ -725,7 +840,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get leveraged tokens user limits
+        /// 查询用户每日申购赎回限额 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-blvt-user-limit-info-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-97" /></para>
         /// </summary>
         /// <param name="tokenName">Filter by token name</param>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -734,7 +851,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Set auto staking for a product
+        /// 设置自动续期(USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#set-auto-staking-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-61" /></para>
         /// </summary>
         /// <param name="product">The staking product</param>
         /// <param name="positionId">The position</param>
@@ -746,7 +865,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get personal staking quota
+        /// 查询Staking个人剩余额度(USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-personal-left-quota-of-staking-product-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#staking-user_data-3" /></para>
         /// </summary>
         /// <param name="product">The staking product</param>
         /// <param name="productId">Product id</param>
@@ -757,7 +878,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Portfolio margin account info
+        /// 查询统一账户信息 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-portfolio-margin-account-info-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-91" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -766,7 +889,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get portfolio margin account collateral rates
+        /// 统一账户资产质押率 (MARKET_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#portfolio-margin-collateral-rate-market_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#market_data-9" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -775,7 +900,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get portfolio margin bankrupty loan amount
+        /// 查询统一账户穿仓借贷金额 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-portfolio-margin-bankruptcy-loan-amount-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-92" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -784,7 +911,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Repay portfolio margin bankruptcy loan
+        /// 偿还统一账户穿仓负债
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#portfolio-margin-bankruptcy-loan-repay" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#eb9fb28dd5" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>

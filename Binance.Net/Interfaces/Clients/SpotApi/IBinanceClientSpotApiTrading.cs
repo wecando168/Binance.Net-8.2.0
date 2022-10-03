@@ -21,7 +21,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
     {
         /// <summary>
         /// Places a new test order. Test orders are not actually being executed and just test the functionality.
+        /// 测试下单 (TRADE) 用于测试订单请求，但不会提交到撮合引擎
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#test-new-order-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade" /></para>
         /// </summary>
         /// <param name="symbol">The symbol the order is for</param>
         /// <param name="side">The order side (buy/sell)</param>
@@ -55,7 +57,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Places a new order
+        /// 下单 (TRADE)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#new-order-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-2" /></para>
         /// </summary>
         /// <param name="symbol">The symbol the order is for</param>
         /// <param name="side">The order side (buy/sell)</param>
@@ -89,7 +93,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Cancels a pending order
+        /// 撤销订单 (TRADE)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#cancel-order-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-3" /></para>
         /// </summary>
         /// <param name="symbol">The symbol the order is for</param>
         /// <param name="orderId">The order id of the order</param>
@@ -102,7 +108,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Cancels all open orders on a symbol
+        /// 撤销单一交易对的所有挂单 (TRADE) 撤销单一交易对下所有挂单, 包括OCO的挂单。
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#cancel-all-open-orders-on-a-symbol-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-4" /></para>
         /// </summary>
         /// <param name="symbol">The symbol the order is for</param>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -112,6 +120,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Cancel an existing order and place a new order on the same symbol
+        /// 撤消挂单再下单 (TRADE)
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#cancel-an-existing-order-and-send-a-new-order-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-5" /></para>
         /// </summary>
         /// <param name="symbol">The symbol the order is for</param>
         /// <param name="side">The order side (buy/sell)</param>
@@ -157,7 +168,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Retrieves data for a specific order. Either orderId or origClientOrderId should be provided.
+        /// 查询订单 (USER_DATA) 至少需要发送 orderId 与 origClientOrderId中的一个
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-order-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-18" /></para>
         /// </summary>
         /// <param name="symbol">The symbol the order is for</param>
         /// <param name="orderId">The order id of the order</param>
@@ -169,7 +182,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets a list of open orders
+        /// 当前挂单 (USER_DATA) 获取交易对的所有当前挂单， 请小心使用不带交易对参数的调用。
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#current-open-orders-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-19" /></para>
         /// </summary>
         /// <param name="symbol">The symbol to get open orders for</param>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -179,7 +194,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets all orders for the provided symbol
+        /// 查询所有订单 (USER_DATA)（指定单一交易代码）
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#all-orders-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-20" /></para>
         /// </summary>
         /// <param name="symbol">The symbol to get orders for</param>
         /// <param name="orderId">If set, only orders with an order id higher than the provided will be returned</param>
@@ -193,7 +210,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Places a new OCO(One cancels other) order
+        /// OCO下单(TRADE)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#new-oco-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-trade" /></para>
         /// </summary>
         /// <param name="symbol">The symbol the order is for</param>
         /// <param name="side">The order side (buy/sell)</param>
@@ -229,7 +248,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Cancels a pending oco order
+        /// 取消 OCO 订单(TRADE)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#cancel-oco-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-trade-2" /></para>
         /// </summary>
         /// <param name="symbol">The symbol the order is for</param>
         /// <param name="orderListId">The id of the order list to cancel</param>
@@ -242,7 +263,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Retrieves data for a specific oco order. Either orderListId or listClientOrderId should be provided.
+        /// 查询 OCO (USER_DATA) 根据提供的可选参数检索特定的OCO。
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-oco-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-user_data" /></para>
         /// </summary>
         /// <param name="orderListId">The list order id of the order</param>
         /// <param name="listClientOrderId">The client order id of the list order</param>
@@ -253,7 +276,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Retrieves a list of oco orders matching the parameters
+        /// 查询所有 OCO (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-all-oco-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-user_data-2" /></para>
         /// </summary>
         /// <param name="fromId">Only return oco orders with id higher than this</param>
         /// <param name="startTime">Only return oco orders placed later than this. Only valid if fromId isn't provided</param>
@@ -266,7 +291,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Retrieves a list of open oco orders
+        /// 查询 OCO 挂单 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-open-oco-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-user_data-3" /></para>
         /// </summary>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
         /// <param name="ct">Cancellation token</param>
@@ -275,7 +302,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets all user trades for provided symbol
+        /// 账户成交历史 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#account-trade-list-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-22" /></para>
         /// </summary>
         /// <param name="symbol">Symbol to get trades for</param>
         /// <param name="orderId">Get trades for this order id</param>
@@ -290,7 +319,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Margin account new order
+        /// 杠杆账户下单 (TRADE)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-new-order-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-7" /></para>
         /// </summary>
         /// <param name="symbol">The symbol the order is for</param>
         /// <param name="side">The order side (buy/sell)</param>
@@ -326,7 +357,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Cancel an active order for margin account
+        /// 杠杆账户撤销订单 (TRADE)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-cancel-order-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-8" /></para>
         /// </summary>
         /// <param name="symbol">The symbol the order is for</param>
         /// <param name="orderId">The order id of the order</param>
@@ -340,7 +373,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Cancel all active orders for a symbol
+        /// 杠杆账户撤销单一交易对的所有挂单 (TRADE)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-cancel-all-open-orders-on-a-symbol-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-9" /></para>
         /// </summary>
         /// <param name="symbol">The symbol the to cancel orders for</param>
         /// <param name="isIsolated">For isolated margin or not</param>
@@ -351,7 +386,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Retrieves data for a specific margin account order. Either orderId or origClientOrderId should be provided.
+        /// 查询杠杆账户订单 (USER_DATA) 必须发送 orderId 或 origClientOrderId 其中一个。
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-order-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-29" /></para>
         /// </summary>
         /// <param name="symbol">The symbol the order is for</param>
         /// <param name="isIsolated">For isolated margin or not</param>
@@ -364,7 +401,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets a list of open margin account orders
+        /// 查询杠杆账户挂单记录 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-open-orders-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-30" /></para>
         /// </summary>
         /// <param name="symbol">The symbol to get open orders for</param>
         /// <param name="isIsolated">For isolated margin or not</param>
@@ -375,7 +414,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets all margin account orders for the provided symbol
+        /// 查询杠杆账户的所有订单(指定单一交易代码） (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-all-orders-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-31" /></para>
         /// </summary>
         /// <param name="symbol">The symbol to get orders for</param>
         /// <param name="isIsolated">For isolated margin or not</param>
@@ -390,7 +431,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets all user margin account trades for provided symbol
+        /// 查询杠杆账户交易历史(指定单一交易代码） (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-trade-list-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-32" /></para>
         /// </summary>
         /// <param name="symbol">Symbol to get trades for</param>
         /// <param name="limit">The max number of results</param>
@@ -405,7 +448,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Places a new margin OCO(One cancels other) order
+        /// 杠杆账户 OCO 下单(TRADE)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-new-oco-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-trade-3" /></para>
         /// </summary>
         /// <param name="symbol">The symbol the order is for</param>
         /// <param name="side">The order side (buy/sell)</param>
@@ -445,7 +490,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Cancels a pending margin oco order
+        /// 取消杠杆账户 OCO 订单(TRADE)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-cancel-oco-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-trade-4" /></para>
         /// </summary>
         /// <param name="symbol">The symbol the order is for</param>
         /// <param name="isIsolated">For isolated margin or not</param>
@@ -459,7 +506,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Retrieves data for a specific margin oco order. Either orderListId or listClientOrderId should be provided.
+        /// 查询杠杆账户 OCO (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-oco-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-user_data-4" /></para>
         /// </summary>
         /// <param name="symbol">Mandatory for isolated margin, not supported for cross margin</param>
         /// <param name="isIsolated">For isolated margin or not</param>
@@ -472,7 +521,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Retrieves a list of margin oco orders matching the parameters
+        /// 查询特定杠杆账户所有 OCO (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-all-oco-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-user_data-5" /></para>
         /// </summary>
         /// <param name="symbol">Mandatory for isolated margin, not supported for cross margin</param>
         /// <param name="isIsolated">For isolated margin or not</param>
@@ -487,7 +538,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Retrieves a list of open margin oco orders
+        /// 查询杠杆账户 OCO 挂单 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-open-oco-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-user_data-6" /></para>
         /// </summary>
         /// <param name="symbol">Mandatory for isolated margin, not supported for cross margin</param>
         /// <param name="isIsolated">For isolated margin or not</param>
@@ -498,7 +551,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Subscribe to a token
+        /// 申购代币 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#subscribe-blvt-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-93" /></para>
         /// </summary>
         /// <param name="tokenName">Name of the token to subscribe to</param>
         /// <param name="cost">Cost of the subscription</param>
@@ -509,7 +564,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get subscription records
+        /// 查询申购记录 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-subscription-record-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-94" /></para>
         /// </summary>
         /// <param name="tokenName">Filter by token</param>
         /// <param name="id">Filter by id</param>
@@ -523,7 +580,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Redeem a token
+        /// 赎回代币 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#redeem-blvt-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-95" /></para>
         /// </summary>
         /// <param name="tokenName">Name of the token to redeem</param>
         /// <param name="quantity">Quantity to redeem</param>
@@ -534,7 +593,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get redemption records
+        /// 查询赎回记录 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-redemption-record-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-96" /></para>
         /// </summary>
         /// <param name="tokenName">Filter by token</param>
         /// <param name="id">Filter by id</param>
@@ -548,7 +609,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Add liquidity to a pool
+        /// 添加流动性 (TRADE) 向某个资金池添加流动性
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#add-liquidity-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-18" /></para>
         /// </summary>
         /// <param name="poolId">The pool</param>
         /// <param name="asset">The asset</param>
@@ -561,7 +624,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Remove liquidity from a pool
+        /// 移除流动性 (TRADE)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#remove-liquidity-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-19" /></para>
         /// </summary>
         /// <param name="poolId">The pool</param>
         /// <param name="asset">The asset</param>
@@ -574,7 +639,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get liquidity operation records
+        /// 获取流动性操作记录 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-liquidity-operation-record-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-99" /></para>
         /// </summary>
         /// <param name="operationId">Filter by operationId</param>
         /// <param name="poolId">Filter by poolId</param>
@@ -590,7 +657,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
         /// <summary>
         /// Request a quote for swap quote asset (selling asset) for base asset (buying asset), essentially price/exchange rates. quoteQty is quantity of quote asset(to sell).
         /// Please be noted the quote is for reference only, the actual price will change as the liquidity changes, it's recommended to swap immediate after request a quote for slippage prevention.
+        /// 获取报价 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#request-quote-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-100" /></para>
         /// </summary>
         /// <param name="quoteAsset">Quote asset</param>
         /// <param name="baseAsset">Base asset</param>
@@ -602,7 +671,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Swap quote asset for base asset
+        /// 交易 (TRADE) 交易，即兑换 quoteAsset 为 baseAsset。
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#swap-trade" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-20" /></para>
         /// </summary>
         /// <param name="quoteAsset">Quote asset</param>
         /// <param name="baseAsset">Base asset</param>
@@ -614,7 +685,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get swap history records
+        /// 获取交易记录 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-swap-history-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-101" /></para>
         /// </summary>
         /// <param name="swapId">Filter by swapId</param>
         /// <param name="status">Filter by status</param>
@@ -631,7 +704,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Calculate expected share quantity for adding liquidity in single or dual token.
+        /// 添加流动性的试算 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#add-liquidity-preview-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-103" /></para>
         /// </summary>
         /// <param name="poolId">The pool</param>
         /// <param name="asset">The asset</param>
@@ -644,7 +719,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Calculate expected share quantity for removing liquidity in single or dual token.
+        /// 移除流动性的试算 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#remove-liquidity-preview-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-104" /></para>
         /// </summary>
         /// <param name="poolId">The pool</param>
         /// <param name="asset">The asset</param>
@@ -657,7 +734,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get liquidity info for a pool
+        /// 获取流动资金池具体信息 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-liquidity-information-of-a-pool-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-98" /></para>
         /// </summary>
         /// <param name="poolId">Get a specific pool</param>
         /// <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -667,7 +746,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get Customer to Customer trade history
+        /// 获取 C2C 交易历史记录 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-c2c-trade-history-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#c2c-user_data" /></para>
         /// </summary>
         /// <param name="side">Trade side</param>
         /// <param name="startTime">Filter by start time</param>
@@ -681,7 +762,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get pay trade history
+        /// 获取 Pay 交易历史记录 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-pay-trade-history-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#pay-user_data" /></para>
         /// </summary>
         /// <param name="startTime">Filter by start time</param>
         /// <param name="endTime">Filter by end time</param>
@@ -693,7 +776,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get convert trade history
+        /// 获取闪兑交易记录 (USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-convert-trade-history-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-110" /></para>
         /// </summary>
         /// <param name="startTime">Filter by start time</param>
         /// <param name="endTime">Filter by end time</param>
@@ -705,7 +790,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Purchase a staking product
+        /// 申购锁仓产品(USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#purchase-staking-product-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-58" /></para>
         /// </summary>
         /// <param name="product">Product type</param>
         /// <param name="productId">Product id</param>
@@ -718,7 +805,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Redeem a staking product
+        /// 赎回锁仓产品(USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#redeem-staking-product-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-59" /></para>
         /// </summary>
         /// <param name="product">Product type</param>
         /// <param name="productId">Product id</param>
@@ -732,7 +821,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get staking positions
+        /// 查看个人持仓(USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-staking-product-position-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-60" /></para>
         /// </summary>
         /// <param name="product">Product type</param>
         /// <param name="productId">Product id</param>
@@ -745,7 +836,9 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Get staking history
+        /// 查看Staking历史记录(USER_DATA)
         /// <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-staking-history-user_data" /></para>
+        /// <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#staking-user_data-2" /></para>
         /// </summary>
         /// <param name="product">Product type</param>
         /// <param name="transactionType">Transaction type</param>
