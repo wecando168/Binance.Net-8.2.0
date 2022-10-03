@@ -5793,8 +5793,8 @@
         <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceClientGeneralApiCryptoLoans.GetOpenBorrowOrdersAsync(System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get ongoing loan orders
-            </summary>
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#borrow-get-loan-ongoing-orders-user_data" /></para>
+            </summary>
             <param name="orderId">Filter by order id</param>
             <param name="loanAsset">Filter by loan asset</param>
             <param name="collateralAsset">Filter by collateral asset</param>
@@ -6573,21 +6573,25 @@
         <member name="P:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApi.Account">
             <summary>
             Endpoints related to account settings, info or actions
+            与帐户设置、信息或操作相关的端点
             </summary>
         </member>
         <member name="P:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApi.ExchangeData">
             <summary>
             Endpoints related to retrieving market and system data
+            与检索市场和系统数据相关的端点
             </summary>
         </member>
         <member name="P:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApi.Trading">
             <summary>
             Endpoints related to orders and trades
+            与订单和交易相关的端点
             </summary>
         </member>
         <member name="P:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApi.CommonSpotClient">
             <summary>
             Get the ISpotClient for this client. This is a common interface which allows for some basic operations without knowing any details of the exchange.
+            获取此客户端的 ISpotClient。 这是一个通用接口，允许在不知道任何交换细节的情况下进行一些基本操作。
             </summary>
             <returns></returns>
         </member>
@@ -6599,7 +6603,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetAccountInfoAsync(System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Gets account information, including balances
+            账户信息 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#account-information-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-21" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -6608,7 +6614,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetDailySpotAccountSnapshotAsync(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get a daily account snapshot (balances)
+            查询每日现货账户资产快照 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#daily-account-snapshot-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-2" /></para>
             </summary>
             <param name="startTime">The start time</param>
             <param name="endTime">The end time</param>
@@ -6620,7 +6628,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetDailyMarginAccountSnapshotAsync(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get a daily account snapshot (assets)
+            查询每日保证金账户资产快照 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#daily-account-snapshot-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-2" /></para>
             </summary>
             <param name="startTime">The start time</param>
             <param name="endTime">The end time</param>
@@ -6632,7 +6642,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetDailyFutureAccountSnapshotAsync(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get a daily account snapshot (assets and positions)
+            查询每日合约账户资产快照 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#daily-account-snapshot-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-2" /></para>
             </summary>
             <param name="startTime">The start time</param>
             <param name="endTime">The end time</param>
@@ -6644,7 +6656,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetAccountStatusAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets the status of the account associated with the api key/secret
+            账户状态 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#account-status-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-9" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -6653,7 +6667,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetFundingWalletAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get funding wallet assets
+            资金账户 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#funding-wallet-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-16" /></para>
             </summary>
             <param name="asset">Filter by asset</param>
             <param name="needBtcValuation">Return BTC valuation</param>
@@ -6664,7 +6680,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetAPIKeyPermissionsAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get permission info for the current API key
+            查询用户API Key权限 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-api-key-permission-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#api-key-user_data" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -6673,7 +6691,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetUserAssetsAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets information of assets for a user
+            获取所有币信息 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#all-coins-39-information-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -6682,7 +6702,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetBalancesAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Retrieve balance info
+            用户持仓 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#user-asset-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-17" /></para>
             </summary>
             <param name="asset">Return for this asset</param>
             <param name="needBtcValuation">Whether the response should include the BtcValuation. If false (default) BtcValuation will be 0.</param>
@@ -6693,7 +6715,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetAssetDividendRecordsAsync(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get asset dividend records
+            资产利息记录 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#asset-dividend-record-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-11" /></para>
             </summary>
             <param name="asset">Filter by asset</param>
             <param name="startTime">Filter by start time from</param>
@@ -6707,7 +6731,9 @@
             <summary>
             This request will disable fastwithdraw switch under your account.
             You need to enable "trade" option for the api key which requests this endpoint.
+            关闭站内划转 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#disable-fast-withdraw-switch-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-3" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -6720,7 +6746,9 @@
             
              When Fast Withdraw Switch is on, transferring funds to a Binance account will be done instantly.
              There is no on-chain transaction, no transaction ID and no withdrawal fee.
+             开启站内划转 (USER_DATA)
              <para><a href="https://binance-docs.github.io/apidocs/spot/en/#enable-fast-withdraw-switch-user_data" /></para>
+             <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-4" /></para>
              </summary>
              <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
              <param name="ct">Cancellation token</param>
@@ -6729,7 +6757,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetDustLogAsync(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets the history of dust conversions
+            小额资产转换BNB历史 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#dustlog-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#bnb-user_data" /></para>
             </summary>
             <param name="startTime">The start time</param>
             <param name="endTime">The end time</param>
@@ -6740,6 +6770,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetAssetsForDustTransferAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get assets that can be converted to BNB
+            获取可以转换成BNB的小额资产 (USER_DATA)
+            <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-assets-that-can-be-converted-into-bnb-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#bnb-user_data-2" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -6748,7 +6781,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.DustTransferAsync(System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Converts dust (small amounts of) assets to BNB 
+            小额资产转换BNB历史 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#dust-transfer-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#bnb-user_data" /></para>
             </summary>
             <param name="assets">The assets to convert to BNB</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -6758,7 +6793,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetBnbBurnStatusAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets the status of the BNB burn switch for spot trading and margin interest
+            获取BNB抵扣开关状态 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-bnb-burn-status-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#bnb-user_data-4" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -6767,7 +6804,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.SetBnbBurnStatusAsync(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Sets the status of the BNB burn switch for spot trading and margin interest
+            现货交易和杠杆利息BNB抵扣开关(USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#toggle-bnb-burn-on-spot-trade-and-margin-interest-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#bnb-user_data-3" /></para>
             </summary>
             <param name="spotTrading">If BNB burning should be enabled for spot trading</param>
             <param name="marginInterest">If BNB burning should be enabled for margin interest</param>
@@ -6778,7 +6817,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.TransferAsync(Binance.Net.Enums.UniversalTransferType,System.String,System.Decimal,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Transfers between accounts
+            用户万向划转 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#user-universal-transfer-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-14" /></para>
             </summary>
             <param name="type">The type of transfer</param>
             <param name="asset">The asset to transfer</param>
@@ -6792,7 +6833,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetTransfersAsync(Binance.Net.Enums.UniversalTransferType,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get transfer history
+            查询用户万向划转历史 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-user-universal-transfer-history-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-15" /></para>
             </summary>
             <param name="type">The type of transfer</param>
             <param name="startTime">Filter by startTime</param>
@@ -6806,7 +6849,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetFiatPaymentHistoryAsync(Binance.Net.Enums.OrderSide,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get Fiat payment history
+            获取法币支付历史记录 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-fiat-payments-history-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-108" /></para>
             </summary>
             <param name="side">Filter by side</param>
             <param name="startTime">Filter by start time</param>
@@ -6820,7 +6865,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetFiatDepositWithdrawHistoryAsync(Binance.Net.Enums.TransactionType,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get Fiat deposit/withdrawal history
+            获取法币充值/提现历史记录 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#fiat-endpoints" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-107" /></para>
             </summary>
             <param name="side">Filter by side</param>
             <param name="startTime">Filter by start time</param>
@@ -6834,7 +6881,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.StartUserStreamAsync(System.Threading.CancellationToken)">
             <summary>
             Starts a user stream by requesting a listen key. This listen key can be used in subsequent requests to BinanceSocketClient.Futures.SubscribeToUserDataUpdates. The stream will close after 60 minutes unless a keep alive is send.
+            生成现货 Listen Key (USER_STREAM)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-spot" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key" /></para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns>Listen key</returns>
@@ -6842,7 +6891,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.KeepAliveUserStreamAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Sends a keep alive for the current user stream listen key to keep the stream from closing. Stream auto closes after 60 minutes if no keep alive is send. 30 minute interval for keep alive is recommended.
+            延长现货 Listen Key 有效期 (USER_STREAM)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-spot" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key" /></para>
             </summary>
             <param name="listenKey">The listen key to keep alive</param>
             <param name="ct">Cancellation token</param>
@@ -6851,7 +6902,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.StopUserStreamAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Stops the current user stream
+            关闭现货 Listen Key (USER_STREAM)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-spot" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key" /></para>
             </summary>
             <param name="listenKey">The listen key to keep alive</param>
             <param name="ct">Cancellation token</param>
@@ -6860,7 +6913,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.WithdrawAsync(System.String,System.String,System.Decimal,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean},System.Nullable{Binance.Net.Enums.WalletType},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Withdraw assets from Binance to an address
+            提币 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#withdraw-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-5" /></para>
             </summary>
             <param name="asset">The asset to withdraw</param>
             <param name="address">The address to send the funds to</param>
@@ -6878,7 +6933,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetWithdrawalHistoryAsync(System.String,System.String,System.Nullable{Binance.Net.Enums.WithdrawalStatus},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets the withdrawal history
+            获取提币历史 (支持多网络) (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#withdraw-history-supporting-network-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-7" /></para>
             </summary>
             <param name="asset">Filter by asset</param>
             <param name="withdrawOrderId">Filter by withdraw order id</param>
@@ -6894,7 +6951,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetDepositHistoryAsync(System.String,System.Nullable{Binance.Net.Enums.DepositStatus},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets the deposit history
+            获取充值历史(支持多网络) (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#deposit-history-supporting-network-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-6" /></para>
             </summary>
             <param name="asset">Filter by asset</param>
             <param name="status">Filter by status</param>
@@ -6909,7 +6968,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetDepositAddressAsync(System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets the deposit address for an asset
+            获取充值地址 (支持多网络) (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#deposit-address-supporting-network-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-8" /></para>
             </summary>
             <param name="asset">Asset to get address for</param>
             <param name="network">Network</param>
@@ -6930,7 +6991,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.CrossMarginTransferAsync(System.String,System.Decimal,Binance.Net.Enums.TransferDirectionType,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Execute transfer between spot account and cross margin account.
+            全仓杠杆账户划转 (MARGIN)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#margin-5" /></para>
             </summary>
             <param name="asset">The asset being transferred, e.g., BTC</param>
             <param name="quantity">The quantity to be transferred</param>
@@ -6942,7 +7005,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.MarginBorrowAsync(System.String,System.Decimal,System.Nullable{System.Boolean},System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Borrow. Apply for a loan. 
+            杠杆账户借贷 (MARGIN)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-borrow-margin" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#margin-6" /></para>
             </summary>
             <param name="asset">The asset being borrow, e.g., BTC</param>
             <param name="quantity">The quantity to be borrow</param>
@@ -6955,7 +7020,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.MarginRepayAsync(System.String,System.Decimal,System.Nullable{System.Boolean},System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Repay loan for margin account.
+            杠杆账户归还借贷 (MARGIN)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-repay-margin" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#margin-7" /></para>
             </summary>
             <param name="asset">The asset being repay, e.g., BTC</param>
             <param name="quantity">The quantity to be borrow</param>
@@ -6968,7 +7035,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetMarginDustLogAsync(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets the history of margin dust conversions
+            杠杆小额资产转换BNB历史 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-dustlog-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#bnb-user_data-5" /></para>
             </summary>
             <param name="startTime">The start time</param>
             <param name="endTime">The end time</param>
@@ -6979,7 +7048,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetCrossMarginTransferHistoryAsync(Binance.Net.Enums.TransferDirection,System.Nullable{System.Int32},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get history of transfers
+            杠杆账户撤销单一交易对的所有挂单 (TRADE)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-cancel-all-open-orders-on-a-symbol-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-9" /></para>
             </summary>
             <param name="direction">The direction of the the transfers to retrieve</param>
             <param name="page">Results page</param>
@@ -6993,7 +7064,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetMarginLoansAsync(System.String,System.Nullable{System.Int64},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Query loan records
+            查询借贷记录 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-loan-record-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-24" /></para>
             </summary>
             <param name="asset">The records asset</param>
             <param name="transactionId">The id of loan transaction</param>
@@ -7010,7 +7083,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetMarginRepaysAsync(System.String,System.Nullable{System.Int64},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Query repay records
+            查询还贷记录 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-repay-record-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-25" /></para>
             </summary>
             <param name="asset">The records asset</param>
             <param name="transactionId">The id of repay transaction</param>
@@ -7027,7 +7102,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetMarginInterestHistoryAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get history of interest
+            获取利息历史 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-interest-history-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-26" /></para>
             </summary>
             <param name="asset">Filter by asset</param>
             <param name="page">Results page</param>
@@ -7043,7 +7120,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetMarginInterestRateHistoryAsync(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get history of interest rate
+            获取杠杆利率历史 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-interest-rate-history-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-40" /></para>
             </summary>
             <param name="asset">Filter by asset</param>
             <param name="vipLevel">Vip level</param>
@@ -7057,7 +7136,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetInterestMarginDataAsync(System.String,System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get cross margin interest data
+            获取全仓杠杆利率及限额 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-cross-margin-fee-data-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-41" /></para>
             </summary>
             <param name="asset">Filter by asset</param>
             <param name="vipLevel">Vip level</param>
@@ -7068,7 +7149,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetMarginForcedLiquidationHistoryAsync(System.Nullable{System.Int32},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get history of forced liquidations
+            获取账户强制平仓记录(USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-force-liquidation-record-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-27" /></para>
             </summary>
             <param name="page">Results page</param>
             <param name="startTime">Filter by startTime from</param>
@@ -7082,7 +7165,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetMarginAccountInfoAsync(System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Query margin account details
+            查询全仓杠杆账户详情 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-cross-margin-account-details-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-28" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -7091,7 +7176,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetMarginMaxBorrowAmountAsync(System.String,System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Query max borrow quantity
+            查询账户最大可借贷额度(USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-max-borrow-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-33" /></para>
             </summary>
             <param name="asset">The records asset</param>
             <param name="isolatedSymbol">The isolated symbol</param>
@@ -7102,7 +7189,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetMarginMaxTransferAmountAsync(System.String,System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Query max transfer-out quantity 
+            查询最大可转出额 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-max-transfer-out-amount-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-34" /></para>
             </summary>
             <param name="asset">The records asset</param>
             <param name="isolatedSymbol">The isolated symbol</param>
@@ -7124,7 +7213,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetIsolatedMarginAccountTransferHistoryAsync(System.String,System.String,System.Nullable{Binance.Net.Enums.IsolatedMarginTransferDirection},System.Nullable{Binance.Net.Enums.IsolatedMarginTransferDirection},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get history of transfer to and from the isolated margin account
+            获取杠杆逐仓划转历史 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-isolated-margin-transfer-history-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-35" /></para>
             </summary>
             <param name="symbol">The symbol</param>
             <param name="asset">Filter by asset</param>
@@ -7141,7 +7232,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetIsolatedMarginAccountAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Isolated margin account info
+            查询杠杆逐仓账户信息 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-isolated-margin-account-info-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-36" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -7150,7 +7243,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetEnabledIsolatedMarginAccountLimitAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get max number of enabled isolated margin accounts
+            查询杠杆逐仓账户启用限制 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-enabled-isolated-margin-account-limit-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-37" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -7159,7 +7254,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.EnableIsolatedMarginAccountAsync(System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Enable an isolated margin account
+            杠杆逐仓账户启用 (TRADE)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#enable-isolated-margin-account-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-11" /></para>
             </summary>
             <param name="symbol">Symbol to enable isoldated margin account for</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -7169,7 +7266,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.DisableIsolatedMarginAccountAsync(System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Disabled an isolated margin account info
+            杠杆逐仓账户停用 (TRADE)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#disable-isolated-margin-account-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-10" /></para>
             </summary>
             <param name="symbol">Symbol to enable isoldated margin account for</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -7179,7 +7278,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.IsolatedMarginAccountTransferAsync(System.String,System.String,Binance.Net.Enums.IsolatedMarginTransferDirection,Binance.Net.Enums.IsolatedMarginTransferDirection,System.Decimal,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Transfer from or to isolated margin account
+            杠杆逐仓账户划转 (MARGIN)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#isolated-margin-account-transfer-margin" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#margin-8" /></para>
             </summary>
             <param name="asset">The asset</param>
             <param name="symbol">Isolated symbol</param>
@@ -7201,7 +7302,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.StartMarginUserStreamAsync(System.Threading.CancellationToken)">
             <summary>
             Starts a user stream by requesting a listen key. This listen key can be used in subsequent requests to BinanceSocketClient.Futures.SubscribeToUserDataUpdates. The stream will close after 60 minutes unless a keep alive is send.
+            生成杠杆账户 ListenKey (USER_STREAM)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-margin" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key-2" /></para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns>Listen key</returns>
@@ -7209,7 +7312,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.KeepAliveMarginUserStreamAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Sends a keep alive for the current user stream listen key to keep the stream from closing. Stream auto closes after 60 minutes if no keep alive is send. 30 minute interval for keep alive is recommended.
+            延长杠杆账户 ListenKey (USER_STREAM)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-margin" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key-2" /></para>
             </summary>
             <param name="listenKey">The listen key to keep alive</param>
             <param name="ct">Cancellation token</param>
@@ -7218,7 +7323,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.StopMarginUserStreamAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Stops the current user stream
+            关闭杠杆账户 ListenKey (USER_STREAM)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-margin" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key-2" /></para>
             </summary>
             <param name="listenKey">The listen key to keep alive</param>
             <param name="ct">Cancellation token</param>
@@ -7229,7 +7336,9 @@
             Starts a user stream  for margin account by requesting a listen key. 
             This listen key can be used in subsequent requests to  BinanceSocketClient.Spot.SubscribeToUserDataUpdates  
             The stream will close after 60 minutes unless a keep alive is send.
+            生成逐仓杠杆账户 ListenKey (USER_STREAM)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-isolated-margin" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key-3" /></para>
             </summary>
             <param name="symbol">The isolated symbol</param>
             <param name="ct">Cancellation token</param>
@@ -7239,7 +7348,9 @@
             <summary>
             Sends a keep alive for the current user stream for margin account listen key to keep the stream from closing. 
             Stream auto closes after 60 minutes if no keep alive is send. 30 minute interval for keep alive is recommended.
+            延长逐仓杠杆账户 ListenKey (USER_STREAM)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-isolated-margin" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key-3" /></para>
             </summary>
             <param name="symbol">The isolated symbol</param>
             <param name="listenKey">The listen key to keep alive</param>
@@ -7249,7 +7360,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.CloseIsolatedMarginUserStreamAsync(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Close the user stream for margin account
+            关闭逐仓杠杆账户 ListenKey (USER_STREAM)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#listen-key-isolated-margin" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key-3" /></para>
             </summary>
             <param name="symbol">The isolated symbol</param>
             <param name="listenKey">The listen key to keep alive</param>
@@ -7259,7 +7372,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetTradingStatusAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets the trading status for the current account
+            账户API交易状态(USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#account-api-trading-status-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#api-user_data" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -7268,7 +7383,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetOrderRateLimitStatusAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get the current used order rate limits
+            查询目前下单数 (TRADE)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-current-order-count-usage-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-6" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -7277,7 +7394,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetRebateHistoryAsync(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get rebate history
+            获取现货返佣历史记录 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-spot-rebate-history-records-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-111" /></para>
             </summary>
             <param name="startTime">Filter by start time</param>
             <param name="endTime">Filter by end time</param>
@@ -7289,7 +7408,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetLeveragedTokensUserLimitAsync(System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get leveraged tokens user limits
+            查询用户每日申购赎回限额 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-blvt-user-limit-info-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-97" /></para>
             </summary>
             <param name="tokenName">Filter by token name</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -7298,7 +7419,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.SetAutoStakingAsync(Binance.Net.Enums.StakingProductType,System.String,System.Boolean,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Set auto staking for a product
+            设置自动续期(USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#set-auto-staking-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-61" /></para>
             </summary>
             <param name="product">The staking product</param>
             <param name="positionId">The position</param>
@@ -7310,7 +7433,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetStakingPersonalQuotaAsync(Binance.Net.Enums.StakingProductType,System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get personal staking quota
+            查询Staking个人剩余额度(USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-personal-left-quota-of-staking-product-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#staking-user_data-3" /></para>
             </summary>
             <param name="product">The staking product</param>
             <param name="productId">Product id</param>
@@ -7321,7 +7446,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetPortfolioMarginAccountInfoAsync(System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Portfolio margin account info
+            查询统一账户信息 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-portfolio-margin-account-info-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-91" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -7330,7 +7457,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetPortfolioMarginCollateralRateAsync(System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get portfolio margin account collateral rates
+            统一账户资产质押率 (MARKET_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#portfolio-margin-collateral-rate-market_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#market_data-9" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -7339,7 +7468,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.GetPortfolioMarginBankruptcyLoanAsync(System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get portfolio margin bankrupty loan amount
+            查询统一账户穿仓借贷金额 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-portfolio-margin-bankruptcy-loan-amount-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-92" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -7348,7 +7479,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiAccount.PortfolioMarginBankruptcyLoanRepayAsync(System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Repay portfolio margin bankruptcy loan
+            偿还统一账户穿仓负债
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#portfolio-margin-bankruptcy-loan-repay" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#eb9fb28dd5" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -7362,7 +7495,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetAssetDetailsAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets the withdraw/deposit details for an asset
+            上架资产详情 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#asset-detail-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-12" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -7379,7 +7514,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.PingAsync(System.Threading.CancellationToken)">
             <summary>
             Pings the Binance API
+            测试服务器连通性
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#test-connectivity" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#16073bbcf1" /></para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns>True if successful ping, false if no response</returns>
@@ -7387,7 +7524,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetServerTimeAsync(System.Threading.CancellationToken)">
             <summary>
             Requests the server for the local time
+            获取服务器时间
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#check-server-time" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#3f1907847c" /></para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns>Server time</returns>
@@ -7403,7 +7542,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetExchangeInfoAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get's information about the exchange including rate limits and information on the provided symbol
+            交易规范信息(指定单一交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#exchange-information" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#e7746f7d60" /></para>
             </summary>
             <param name="symbol">Symbol to get data for token</param>
             <param name="ct">Cancellation token</param>
@@ -7412,7 +7553,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetExchangeInfoAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
             <summary>
             Get's information about the exchange including rate limits and information on the provided symbols
+            交易规范信息(指定多个交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#exchange-information" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#e7746f7d60" /></para>
             </summary>
             <param name="symbols">Symbols to get data for token</param>
             <param name="ct">Cancellation token</param>
@@ -7421,6 +7564,7 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetExchangeInfoAsync(Binance.Net.Enums.AccountType,System.Threading.CancellationToken)">
             <summary>
             Get's information about the exchange including rate limits and information on the provided symbol based on an account permission
+            交易规范信息(所有交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#exchange-information" /></para>
             </summary>
             <param name="permission">account type</param>
@@ -7439,7 +7583,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetSystemStatusAsync(System.Threading.CancellationToken)">
             <summary>
             Gets the status of the Binance platform
+            系统状态(System)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#system-status-system" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#system" /></para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns>The system status</returns>
@@ -7447,7 +7593,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetRecentTradesAsync(System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets the recent trades for a symbol
+            近期成交列表
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#recent-trades-list" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#2c5e424c25" /></para>
             </summary>
             <param name="symbol">The symbol to get recent trades for</param>
             <param name="limit">Result limit</param>
@@ -7457,7 +7605,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetTradeHistoryAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Gets the historical  trades for a symbol
+            查询历史成交 (MARKET_DATA)(指定单一交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#old-trade-lookup-market_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#market_data" /></para>
             </summary>
             <param name="symbol">The symbol to get recent trades for</param>
             <param name="limit">Result limit</param>
@@ -7468,7 +7618,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetAggregatedTradeHistoryAsync(System.String,System.Nullable{System.Int64},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets compressed, aggregate trades. Trades that fill at the time, from the same order, with the same price will have the quantity aggregated.
+            近期成交(归集) 归集交易与逐笔交易的区别在于，同一价格、同一方向、同一时间的trade会被聚合为一条
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#compressed-aggregate-trades-list" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#c59e471e81" /></para>
             </summary>
             <param name="symbol">The symbol to get the trades for</param>
             <param name="fromId">ID to get aggregate trades from INCLUSIVE.</param>
@@ -7480,8 +7632,10 @@
         </member>
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetKlinesAsync(System.String,Binance.Net.Enums.KlineInterval,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
-            Get candlestick data for the provided symbol
+            Get candlestick data for the provided symbol 每根K线代表一个交易对。每根K线的开盘时间可视为唯一ID
+            K线数据
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#k" /></para>
             </summary>
             <param name="symbol">The symbol to get the data for</param>
             <param name="interval">The candlestick timespan</param>
@@ -7507,7 +7661,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetOrderBookAsync(System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets the order book for the provided symbol
+            深度信息
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#order-book" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#38a975b802" /></para>
             </summary>
             <param name="symbol">The symbol to get the order book for</param>
             <param name="limit">Max number of results</param>
@@ -7517,7 +7673,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetCurrentAvgPriceAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Gets current average price for a symbol
+            当前平均价格
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#current-average-price" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#3b4f48cdbb" /></para>
             </summary>
             <param name="symbol">The symbol to get the data for</param>
             <param name="ct">Cancellation token</param>
@@ -7526,7 +7684,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetTradeFeeAsync(System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets the trade fee for a symbol
+            交易手续费率查询 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#trade-fee-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-13" /></para>
             </summary>
             <param name="symbol">Symbol to get withdrawal fee for</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -7536,7 +7696,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetTickerAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get data regarding the last 24 hours for the provided symbol
+            24hr 价格变动情况(指定单一交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#24hr-ticker-price-change-statistics" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#24hr" /></para>
             </summary>
             <param name="symbol">The symbol to get the data for</param>
             <param name="ct">Cancellation token</param>
@@ -7545,7 +7707,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetTickersAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
             <summary>
             Get data regarding the last 24 hours for the provided symbols
+            24hr 价格变动情况(指定多个交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#24hr-ticker-price-change-statistics" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#24hr" /></para>
             </summary>
             <param name="symbols">The symbols to get the data for</param>
             <param name="ct">Cancellation token</param>
@@ -7554,7 +7718,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetTickersAsync(System.Threading.CancellationToken)">
             <summary>
             Get data regarding the last 24 hours for all symbols
+            24hr 价格变动情况(所有交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#24hr-ticker-price-change-statistics" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#24hr" /></para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns>List of data over the last 24 hours</returns>
@@ -7562,7 +7728,12 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetRollingWindowTickerAsync(System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
             <summary>
             Get data based on the last x time, specified as windowSize
+            滚动窗口价格变动统计(指定单一交易代码）
+            此接口统计的时间范围比请求的windowSize多不超过59999ms.
+            接口的 openTime 是某一分钟的起始，而结束是当前的时间. 所以实际的统计区间会比请求的时间窗口多不超过59999ms.
+            比如, 结束时间 closeTime 是 1641287867099 (January 04, 2022 09:17:47:099 UTC) , windowSize 为 1d. 那么开始时间 openTime 则为 1641201420000 (January 3, 2022, 09:17:00 UTC)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#rolling-window-price-change-statistics" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#4175e32579" /></para>
             </summary>
             <param name="symbol">The symbol to get data for</param>
             <param name="windowSize">The window size to use</param>
@@ -7572,7 +7743,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetRollingWindowTickersAsync(System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
             <summary>
             Get data based on the last x time, specified as windowSize
+            滚动窗口价格变动统计(指定多个交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#rolling-window-price-change-statistics" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#4175e32579" /></para>
             </summary>
             <param name="symbols">The symbols to get data for</param>
             <param name="windowSize">The window size to use</param>
@@ -7582,7 +7755,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetBookPriceAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Gets the best price/quantity on the order book for a symbol.
+            当前最优挂单(指定单一交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#rolling-window-price-change-statistics" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#5393cd07b4" /></para>
             </summary>
             <param name="symbol">Symbol to get book price for</param>
             <param name="ct">Cancellation token</param>
@@ -7591,7 +7766,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetBookPricesAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
             <summary>
             Gets the best price/quantity on the order book for a symbol.
+            当前最优挂单(指定多个交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#symbol-order-book-ticker" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#5393cd07b4" /></para>
             </summary>
             <param name="symbol">Symbol to get book price for</param>
             <param name="ct">Cancellation token</param>
@@ -7600,7 +7777,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetBookPricesAsync(System.Threading.CancellationToken)">
             <summary>
             Gets the best price/quantity on the order book for all symbols.
+            当前最优挂单(所有交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#symbol-order-book-ticker" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#5393cd07b4" /></para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns>List of book prices</returns>
@@ -7608,7 +7787,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetPriceAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Gets the price of a symbol
+            最新价格(指定单一交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#symbol-price-ticker" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#8ff46b58de" /></para>
             </summary>
             <param name="symbol">The symbol to get the price for</param>
             <param name="ct">Cancellation token</param>
@@ -7617,7 +7798,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetPricesAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
             <summary>
              Gets the prices of symbols
+             最新价格(指定多个交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#symbol-price-ticker" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#8ff46b58de" /></para>
             </summary>
             <param name="symbols">The symbols to get the price for</param>
             <param name="ct">Cancellation token</param>
@@ -7626,7 +7809,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetPricesAsync(System.Threading.CancellationToken)">
             <summary>
             Get a list of the prices of all symbols
+            最新价格(所有交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#symbol-price-ticker" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#8ff46b58de" /></para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns>List of prices</returns>
@@ -7634,7 +7819,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetMarginAssetAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get a margin asset
+            查询杠杆资产 (MARKET_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-asset-market_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#market_data-2" /></para>
             </summary>
             <param name="asset">The symbol to get</param>
             <param name="ct">Cancellation token</param>
@@ -7643,7 +7830,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetMarginSymbolAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get a margin pair
+            查询全仓杠杆交易对 (MARKET_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-cross-margin-pair-market_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#market_data-3" /></para>
             </summary>
             <param name="symbol">The symbol to get</param>
             <param name="ct">Cancellation token</param>
@@ -7652,7 +7841,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetMarginAssetsAsync(System.Threading.CancellationToken)">
             <summary>
             Get all assets available for margin trading
+            获取所有杠杆资产信息 (MARKET_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-all-margin-assets-market_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#market_data-4" /></para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns>List of margin assets</returns>
@@ -7660,7 +7851,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetMarginSymbolsAsync(System.Threading.CancellationToken)">
             <summary>
             Get all asset pairs available for margin trading
+            获取所有全仓杠杆交易对(MARKET_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-all-cross-margin-pairs-market_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#market_data-5" /></para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns>List of margin pairs</returns>
@@ -7668,7 +7861,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetMarginPriceIndexAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get margin price index
+            查询杠杆价格指数 (MARKET_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-priceindex-market_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#market_data-6" /></para>
             </summary>
             <param name="symbol">The symbol to get</param>
             <param name="ct">Cancellation token</param>
@@ -7677,7 +7872,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetIsolatedMarginSymbolAsync(System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Isolated margin symbol info
+            查询逐仓杠杆交易对 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-isolated-margin-symbol-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-38" /></para>
             </summary>
             <param name="symbol">The symbol</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -7687,7 +7884,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetIsolatedMarginSymbolsAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Isolated margin symbol info
+            获取所有逐仓杠杆交易对(USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-all-isolated-margin-symbol-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-39" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -7696,7 +7895,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetLeveragedTokenInfoAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get blvt info
+            杠杆代币信息 (MARKET_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-blvt-info-market_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#68899edc7a" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -7705,6 +7906,7 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetLeveragedTokensHistoricalKlinesAsync(System.String,Binance.Net.Enums.KlineInterval,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get's historical klines
+            币安合约K线
             <para><a href="https://binance-docs.github.io/apidocs/futures/en/#historical-blvt-nav-kline-candlestick" /></para>
             </summary>
             <param name="symbol">The token</param>
@@ -7719,7 +7921,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetLiquidityPoolsAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get all swap pools
+            获取所有流动资金池 (MARKET_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#list-all-swap-pools-market_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#market_data-11" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -7728,7 +7932,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetLiquidityPoolConfigurationAsync(System.Int32,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get pool config
+            获取币对池的配置信息 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-pool-configure-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-102" /></para>
             </summary>
             <param name="poolId">Id of the pool</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -7738,7 +7944,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiExchangeData.GetStakingProductsAsync(Binance.Net.Enums.StakingProductType,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get avaialble staking products list
+            查询Staking产品列表(USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-staking-product-list-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#staking-user_data" /></para>
             </summary>
             <param name="product">Product type</param>
             <param name="asset">Filter for asset</param>
@@ -7756,7 +7964,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.PlaceTestOrderAsync(System.String,Binance.Net.Enums.OrderSide,Binance.Net.Enums.SpotOrderType,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String,System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.TimeInForce},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.OrderResponseType},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Places a new test order. Test orders are not actually being executed and just test the functionality.
+            测试下单 (TRADE) 用于测试订单请求，但不会提交到撮合引擎
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#test-new-order-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade" /></para>
             </summary>
             <param name="symbol">The symbol the order is for</param>
             <param name="side">The order side (buy/sell)</param>
@@ -7777,7 +7987,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.PlaceOrderAsync(System.String,Binance.Net.Enums.OrderSide,Binance.Net.Enums.SpotOrderType,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String,System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.TimeInForce},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.OrderResponseType},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Places a new order
+            下单 (TRADE)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#new-order-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-2" /></para>
             </summary>
             <param name="symbol">The symbol the order is for</param>
             <param name="side">The order side (buy/sell)</param>
@@ -7798,7 +8010,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.CancelOrderAsync(System.String,System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Cancels a pending order
+            撤销订单 (TRADE)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#cancel-order-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-3" /></para>
             </summary>
             <param name="symbol">The symbol the order is for</param>
             <param name="orderId">The order id of the order</param>
@@ -7811,7 +8025,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.CancelAllOrdersAsync(System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Cancels all open orders on a symbol
+            撤销单一交易对的所有挂单 (TRADE) 撤销单一交易对下所有挂单, 包括OCO的挂单。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#cancel-all-open-orders-on-a-symbol-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-4" /></para>
             </summary>
             <param name="symbol">The symbol the order is for</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -7821,6 +8037,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.ReplaceOrderAsync(System.String,Binance.Net.Enums.OrderSide,Binance.Net.Enums.SpotOrderType,Binance.Net.Enums.CancelReplaceMode,System.Nullable{System.Int64},System.String,System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.TimeInForce},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.OrderResponseType},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Cancel an existing order and place a new order on the same symbol
+            撤消挂单再下单 (TRADE)
+            <para><a href="https://binance-docs.github.io/apidocs/spot/en/#cancel-an-existing-order-and-send-a-new-order-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-5" /></para>
             </summary>
             <param name="symbol">The symbol the order is for</param>
             <param name="side">The order side (buy/sell)</param>
@@ -7847,7 +8066,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetOrderAsync(System.String,System.Nullable{System.Int64},System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Retrieves data for a specific order. Either orderId or origClientOrderId should be provided.
+            查询订单 (USER_DATA) 至少需要发送 orderId 与 origClientOrderId中的一个
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-order-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-18" /></para>
             </summary>
             <param name="symbol">The symbol the order is for</param>
             <param name="orderId">The order id of the order</param>
@@ -7859,7 +8080,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetOpenOrdersAsync(System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets a list of open orders
+            当前挂单 (USER_DATA) 获取交易对的所有当前挂单， 请小心使用不带交易对参数的调用。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#current-open-orders-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-19" /></para>
             </summary>
             <param name="symbol">The symbol to get open orders for</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -7869,7 +8092,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetOrdersAsync(System.String,System.Nullable{System.Int64},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets all orders for the provided symbol
+            查询所有订单 (USER_DATA)（指定单一交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#all-orders-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-20" /></para>
             </summary>
             <param name="symbol">The symbol to get orders for</param>
             <param name="orderId">If set, only orders with an order id higher than the provided will be returned</param>
@@ -7883,7 +8108,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.PlaceOcoOrderAsync(System.String,Binance.Net.Enums.OrderSide,System.Decimal,System.Decimal,System.Decimal,System.Nullable{System.Decimal},System.String,System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.TimeInForce},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Places a new OCO(One cancels other) order
+            OCO下单(TRADE)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#new-oco-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-trade" /></para>
             </summary>
             <param name="symbol">The symbol the order is for</param>
             <param name="side">The order side (buy/sell)</param>
@@ -7905,7 +8132,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.CancelOcoOrderAsync(System.String,System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Cancels a pending oco order
+            取消 OCO 订单(TRADE)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#cancel-oco-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-trade-2" /></para>
             </summary>
             <param name="symbol">The symbol the order is for</param>
             <param name="orderListId">The id of the order list to cancel</param>
@@ -7918,7 +8147,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetOcoOrderAsync(System.Nullable{System.Int64},System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Retrieves data for a specific oco order. Either orderListId or listClientOrderId should be provided.
+            查询 OCO (USER_DATA) 根据提供的可选参数检索特定的OCO。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-oco-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-user_data" /></para>
             </summary>
             <param name="orderListId">The list order id of the order</param>
             <param name="listClientOrderId">The client order id of the list order</param>
@@ -7929,7 +8160,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetOcoOrdersAsync(System.Nullable{System.Int64},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Retrieves a list of oco orders matching the parameters
+            查询所有 OCO (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-all-oco-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-user_data-2" /></para>
             </summary>
             <param name="fromId">Only return oco orders with id higher than this</param>
             <param name="startTime">Only return oco orders placed later than this. Only valid if fromId isn't provided</param>
@@ -7942,7 +8175,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetOpenOcoOrdersAsync(System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Retrieves a list of open oco orders
+            查询 OCO 挂单 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-open-oco-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-user_data-3" /></para>
             </summary>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
@@ -7951,7 +8186,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetUserTradesAsync(System.String,System.Nullable{System.Int64},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Gets all user trades for provided symbol
+            账户成交历史 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#account-trade-list-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-22" /></para>
             </summary>
             <param name="symbol">Symbol to get trades for</param>
             <param name="orderId">Get trades for this order id</param>
@@ -7966,7 +8203,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.PlaceMarginOrderAsync(System.String,Binance.Net.Enums.OrderSide,Binance.Net.Enums.SpotOrderType,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String,System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.TimeInForce},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.SideEffectType},System.Nullable{System.Boolean},System.Nullable{Binance.Net.Enums.OrderResponseType},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Margin account new order
+            杠杆账户下单 (TRADE)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-new-order-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-7" /></para>
             </summary>
             <param name="symbol">The symbol the order is for</param>
             <param name="side">The order side (buy/sell)</param>
@@ -7988,7 +8227,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.CancelMarginOrderAsync(System.String,System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Cancel an active order for margin account
+            杠杆账户撤销订单 (TRADE)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-cancel-order-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-8" /></para>
             </summary>
             <param name="symbol">The symbol the order is for</param>
             <param name="orderId">The order id of the order</param>
@@ -8002,7 +8243,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.CancelAllMarginOrdersAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Cancel all active orders for a symbol
+            杠杆账户撤销单一交易对的所有挂单 (TRADE)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-cancel-all-open-orders-on-a-symbol-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-9" /></para>
             </summary>
             <param name="symbol">The symbol the to cancel orders for</param>
             <param name="isIsolated">For isolated margin or not</param>
@@ -8013,7 +8256,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetMarginOrderAsync(System.String,System.Nullable{System.Int64},System.String,System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Retrieves data for a specific margin account order. Either orderId or origClientOrderId should be provided.
+            查询杠杆账户订单 (USER_DATA) 必须发送 orderId 或 origClientOrderId 其中一个。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-order-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-29" /></para>
             </summary>
             <param name="symbol">The symbol the order is for</param>
             <param name="isIsolated">For isolated margin or not</param>
@@ -8026,7 +8271,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetOpenMarginOrdersAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets a list of open margin account orders
+            查询杠杆账户挂单记录 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-open-orders-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-30" /></para>
             </summary>
             <param name="symbol">The symbol to get open orders for</param>
             <param name="isIsolated">For isolated margin or not</param>
@@ -8037,7 +8284,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetMarginOrdersAsync(System.String,System.Nullable{System.Int64},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Gets all margin account orders for the provided symbol
+            查询杠杆账户的所有订单(指定单一交易代码） (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-all-orders-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-31" /></para>
             </summary>
             <param name="symbol">The symbol to get orders for</param>
             <param name="isIsolated">For isolated margin or not</param>
@@ -8052,7 +8301,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetMarginUserTradesAsync(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Gets all user margin account trades for provided symbol
+            查询杠杆账户交易历史(指定单一交易代码） (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-trade-list-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-32" /></para>
             </summary>
             <param name="symbol">Symbol to get trades for</param>
             <param name="limit">The max number of results</param>
@@ -8067,7 +8318,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.PlaceMarginOCOOrderAsync(System.String,Binance.Net.Enums.OrderSide,System.Decimal,System.Decimal,System.Decimal,System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.TimeInForce},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.SideEffectType},System.Nullable{System.Boolean},System.String,System.String,System.String,System.Nullable{Binance.Net.Enums.OrderResponseType},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Places a new margin OCO(One cancels other) order
+            杠杆账户 OCO 下单(TRADE)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-new-oco-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-trade-3" /></para>
             </summary>
             <param name="symbol">The symbol the order is for</param>
             <param name="side">The order side (buy/sell)</param>
@@ -8091,7 +8344,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.CancelMarginOcoOrderAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Cancels a pending margin oco order
+            取消杠杆账户 OCO 订单(TRADE)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#margin-account-cancel-oco-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-trade-4" /></para>
             </summary>
             <param name="symbol">The symbol the order is for</param>
             <param name="isIsolated">For isolated margin or not</param>
@@ -8105,7 +8360,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetMarginOcoOrderAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Int64},System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Retrieves data for a specific margin oco order. Either orderListId or listClientOrderId should be provided.
+            查询杠杆账户 OCO (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-oco-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-user_data-4" /></para>
             </summary>
             <param name="symbol">Mandatory for isolated margin, not supported for cross margin</param>
             <param name="isIsolated">For isolated margin or not</param>
@@ -8118,7 +8375,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetMarginOcoOrdersAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Retrieves a list of margin oco orders matching the parameters
+            查询特定杠杆账户所有 OCO (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-all-oco-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-user_data-5" /></para>
             </summary>
             <param name="symbol">Mandatory for isolated margin, not supported for cross margin</param>
             <param name="isIsolated">For isolated margin or not</param>
@@ -8133,7 +8392,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetMarginOpenOcoOrdersAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Retrieves a list of open margin oco orders
+            查询杠杆账户 OCO 挂单 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-open-oco-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#oco-user_data-6" /></para>
             </summary>
             <param name="symbol">Mandatory for isolated margin, not supported for cross margin</param>
             <param name="isIsolated">For isolated margin or not</param>
@@ -8144,7 +8405,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.SubscribeLeveragedTokenAsync(System.String,System.Decimal,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Subscribe to a token
+            申购代币 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#subscribe-blvt-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-93" /></para>
             </summary>
             <param name="tokenName">Name of the token to subscribe to</param>
             <param name="cost">Cost of the subscription</param>
@@ -8155,7 +8418,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetLeveragedTokensSubscriptionRecordsAsync(System.String,System.Nullable{System.Int64},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get subscription records
+            查询申购记录 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-subscription-record-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-94" /></para>
             </summary>
             <param name="tokenName">Filter by token</param>
             <param name="id">Filter by id</param>
@@ -8169,7 +8434,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.RedeemLeveragedTokenAsync(System.String,System.Decimal,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Redeem a token
+            赎回代币 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#redeem-blvt-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-95" /></para>
             </summary>
             <param name="tokenName">Name of the token to redeem</param>
             <param name="quantity">Quantity to redeem</param>
@@ -8180,7 +8447,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetLeveragedTokensRedemptionRecordsAsync(System.String,System.Nullable{System.Int64},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get redemption records
+            查询赎回记录 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#query-redemption-record-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-96" /></para>
             </summary>
             <param name="tokenName">Filter by token</param>
             <param name="id">Filter by id</param>
@@ -8194,7 +8463,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.AddToLiquidityPoolAsync(System.Int32,System.String,System.Decimal,System.Nullable{Binance.Net.Enums.LiquidityType},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Add liquidity to a pool
+            添加流动性 (TRADE) 向某个资金池添加流动性
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#add-liquidity-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-18" /></para>
             </summary>
             <param name="poolId">The pool</param>
             <param name="asset">The asset</param>
@@ -8207,7 +8478,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.RemoveFromLiquidityPoolAsync(System.Int32,System.String,Binance.Net.Enums.LiquidityType,System.Decimal,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Remove liquidity from a pool
+            移除流动性 (TRADE)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#remove-liquidity-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-19" /></para>
             </summary>
             <param name="poolId">The pool</param>
             <param name="asset">The asset</param>
@@ -8220,7 +8493,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetLiquidityPoolOperationRecordsAsync(System.Nullable{System.Int64},System.Nullable{System.Int32},System.Nullable{Binance.Net.Enums.BSwapOperation},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get liquidity operation records
+            获取流动性操作记录 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-liquidity-operation-record-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-99" /></para>
             </summary>
             <param name="operationId">Filter by operationId</param>
             <param name="poolId">Filter by poolId</param>
@@ -8236,7 +8511,9 @@
             <summary>
             Request a quote for swap quote asset (selling asset) for base asset (buying asset), essentially price/exchange rates. quoteQty is quantity of quote asset(to sell).
             Please be noted the quote is for reference only, the actual price will change as the liquidity changes, it's recommended to swap immediate after request a quote for slippage prevention.
+            获取报价 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#request-quote-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-100" /></para>
             </summary>
             <param name="quoteAsset">Quote asset</param>
             <param name="baseAsset">Base asset</param>
@@ -8248,7 +8525,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.LiquidityPoolSwapAsync(System.String,System.String,System.Decimal,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Swap quote asset for base asset
+            交易 (TRADE) 交易，即兑换 quoteAsset 为 baseAsset。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#swap-trade" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#trade-20" /></para>
             </summary>
             <param name="quoteAsset">Quote asset</param>
             <param name="baseAsset">Base asset</param>
@@ -8260,7 +8539,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetLiquidityPoolSwapHistoryAsync(System.Nullable{System.Int64},System.Nullable{Binance.Net.Enums.BSwapStatus},System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get swap history records
+            获取交易记录 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-swap-history-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-101" /></para>
             </summary>
             <param name="swapId">Filter by swapId</param>
             <param name="status">Filter by status</param>
@@ -8276,7 +8557,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.AddToLiquidityPoolPreviewAsync(System.Int32,System.String,System.Decimal,Binance.Net.Enums.LiquidityType,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Calculate expected share quantity for adding liquidity in single or dual token.
+            添加流动性的试算 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#add-liquidity-preview-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-103" /></para>
             </summary>
             <param name="poolId">The pool</param>
             <param name="asset">The asset</param>
@@ -8289,7 +8572,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.RemoveFromLiquidityPoolPreviewAsync(System.Int32,System.String,System.Decimal,Binance.Net.Enums.LiquidityType,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Calculate expected share quantity for removing liquidity in single or dual token.
+            移除流动性的试算 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#remove-liquidity-preview-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-104" /></para>
             </summary>
             <param name="poolId">The pool</param>
             <param name="asset">The asset</param>
@@ -8302,7 +8587,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetLiquidityPoolInfoAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get liquidity info for a pool
+            获取流动资金池具体信息 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-liquidity-information-of-a-pool-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-98" /></para>
             </summary>
             <param name="poolId">Get a specific pool</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
@@ -8312,7 +8599,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetC2CTradeHistoryAsync(Binance.Net.Enums.OrderSide,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get Customer to Customer trade history
+            获取 C2C 交易历史记录 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-c2c-trade-history-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#c2c-user_data" /></para>
             </summary>
             <param name="side">Trade side</param>
             <param name="startTime">Filter by start time</param>
@@ -8326,7 +8615,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetPayTradeHistoryAsync(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get pay trade history
+            获取 Pay 交易历史记录 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-pay-trade-history-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#pay-user_data" /></para>
             </summary>
             <param name="startTime">Filter by start time</param>
             <param name="endTime">Filter by end time</param>
@@ -8338,7 +8629,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetConvertTradeHistoryAsync(System.DateTime,System.DateTime,System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get convert trade history
+            获取闪兑交易记录 (USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-convert-trade-history-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-110" /></para>
             </summary>
             <param name="startTime">Filter by start time</param>
             <param name="endTime">Filter by end time</param>
@@ -8350,7 +8643,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.PurchaseStakingProductAsync(Binance.Net.Enums.StakingProductType,System.String,System.Decimal,System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Purchase a staking product
+            申购锁仓产品(USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#purchase-staking-product-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-58" /></para>
             </summary>
             <param name="product">Product type</param>
             <param name="productId">Product id</param>
@@ -8363,7 +8658,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.RedeemStakingProductAsync(Binance.Net.Enums.StakingProductType,System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Redeem a staking product
+            赎回锁仓产品(USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#redeem-staking-product-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-59" /></para>
             </summary>
             <param name="product">Product type</param>
             <param name="productId">Product id</param>
@@ -8377,7 +8674,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetStakingPositionsAsync(Binance.Net.Enums.StakingProductType,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get staking positions
+            查看个人持仓(USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-staking-product-position-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#user_data-60" /></para>
             </summary>
             <param name="product">Product type</param>
             <param name="productId">Product id</param>
@@ -8390,7 +8689,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceClientSpotApiTrading.GetStakingHistoryAsync(Binance.Net.Enums.StakingProductType,Binance.Net.Enums.StakingTransactionType,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get staking history
+            查看Staking历史记录(USER_DATA)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-staking-history-user_data" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#staking-user_data-2" /></para>
             </summary>
             <param name="product">Product type</param>
             <param name="transactionType">Transaction type</param>
@@ -8437,7 +8738,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToAggregatedTradeUpdatesAsync(System.String,System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamAggregatedTrade}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the aggregated trades update stream for the provided symbol
+            归集交易流（指定单一交易代码） 归集交易 stream 推送交易信息，是对单一订单的集合。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#aggregate-trade-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#65fd2c6263" /></para>
             </summary>
             <param name="symbol">The symbol</param>
             <param name="onMessage">The event handler for the received data</param>
@@ -8447,7 +8750,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToAggregatedTradeUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamAggregatedTrade}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the aggregated trades update stream for the provided symbols
+            归集交易流（指定多个交易代码） 归集交易 stream 推送交易信息，是对单一订单的集合。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#aggregate-trade-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#65fd2c6263" /></para>
             </summary>
             <param name="symbols">The symbols</param>
             <param name="onMessage">The event handler for the received data</param>
@@ -8457,7 +8762,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToKlineUpdatesAsync(System.String,Binance.Net.Enums.KlineInterval,System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the candlestick update stream for the provided symbol
+            K线 Streams（指定单一交易代码，指定单一时间间隔）  K线stream逐秒推送所请求的K线种类(最新一根K线)的更新。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#k-streams" /></para>
             </summary>
             <param name="symbol">The symbol</param>
             <param name="interval">The interval of the candlesticks</param>
@@ -8468,7 +8775,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToKlineUpdatesAsync(System.String,System.Collections.Generic.IEnumerable{Binance.Net.Enums.KlineInterval},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the candlestick update stream for the provided symbol and intervals
+            K线 Streams（指定单一交易代码，指定多个时间间隔）  K线stream逐秒推送所请求的K线种类(最新一根K线)的更新。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#k-streams" /></para>
             </summary>
             <param name="symbol">The symbol</param>
             <param name="intervals">The intervals of the candlesticks</param>
@@ -8479,7 +8788,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToKlineUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},Binance.Net.Enums.KlineInterval,System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the candlestick update stream for the provided symbols
+            K线 Streams（指定多个交易代码，指定单一时间间隔）  K线stream逐秒推送所请求的K线种类(最新一根K线)的更新。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#k-streams" /></para>
             </summary>
             <param name="symbols">The symbols</param>
             <param name="interval">The interval of the candlesticks</param>
@@ -8490,7 +8801,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToKlineUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Binance.Net.Enums.KlineInterval},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the candlestick update stream for the provided symbols and intervals
+            K线 Streams（指定多个交易代码，指定多个时间间隔）  K线stream逐秒推送所请求的K线种类(最新一根K线)的更新。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#k-streams" /></para>
             </summary>
             <param name="symbols">The symbols</param>
             <param name="intervals">The intervals of the candlesticks</param>
@@ -8501,7 +8814,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToMiniTickerUpdatesAsync(System.String,System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceMiniTick}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to mini ticker updates stream for a specific symbol
+            按 Symbol 的精简Ticker（指定单一交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-mini-ticker-stream" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#symbol-ticker" /></para>
             </summary>
             <param name="symbol">The symbol to subscribe to</param>
             <param name="onMessage">The event handler for the received data</param>
@@ -8511,7 +8826,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToMiniTickerUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceMiniTick}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to mini ticker updates stream for a list of symbol
+            按 Symbol 的精简Ticker（指定多个交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-mini-ticker-stream" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#symbol-ticker" /></para>
             </summary>
             <param name="symbols">The symbols to subscribe to</param>
             <param name="onMessage">The event handler for the received data</param>
@@ -8521,7 +8838,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToAllMiniTickerUpdatesAsync(System.Action{CryptoExchange.Net.Sockets.DataEvent{System.Collections.Generic.IEnumerable{Binance.Net.Interfaces.IBinanceMiniTick}}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to mini ticker updates stream for all symbols
+            全市场所有Symbol的精简Ticker
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#all-market-mini-tickers-stream" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#symbol-ticker-2" /></para>
             </summary>
             <param name="onMessage">The event handler for the received data</param>
             <param name="ct">Cancellation token for closing this subscription</param>
@@ -8530,7 +8849,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToRollingWindowTickerUpdatesAsync(System.String,System.TimeSpan,System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamRollingWindowTick}},System.Threading.CancellationToken)">
             <summary>
             Subscribe to rolling window ticker updates stream for a symbol
+            按Symbol的滚动窗口统计 单个symbol的滚动窗口统计, 支持多个时间窗口。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-rolling-window-statistics-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#symbol-2" /></para>
             </summary>
             <param name="symbol">The symbol to subscribe</param>
             <param name="windowSize">Window size, either 1 hour or 4 hours</param>
@@ -8541,7 +8862,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToAllRollingWindowTickerUpdatesAsync(System.TimeSpan,System.Action{CryptoExchange.Net.Sockets.DataEvent{System.Collections.Generic.IEnumerable{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamRollingWindowTick}}},System.Threading.CancellationToken)">
             <summary>
             Subscribe to rolling window ticker updates stream for all symbols
+            全市场滚动窗口统计 全市场symbols的滚动窗口ticker统计，计算于多个窗口。注意：有变动的ticker才会推送。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#all-market-rolling-window-statistics-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#586bf03bff" /></para>
             </summary>
             <param name="windowSize">Window size, either 1 hour or 4 hours</param>
             <param name="onMessage">The event handler for the received data</param>
@@ -8551,7 +8874,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToTickerUpdatesAsync(System.String,System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceTick}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to ticker updates stream for a specific symbol
+            按Symbol的完整Ticker （指定单一交易代码）每秒推送单个交易对的过去24小时滚动窗口标签统计信息。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-ticker-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#symbol-ticker-3" /></para>
             </summary>
             <param name="symbol">The symbol to subscribe to</param>
             <param name="onMessage">The event handler for the received data</param>
@@ -8561,7 +8886,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToTickerUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceTick}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to ticker updates stream for a specific symbol
+            按Symbol的完整Ticker （指定多个交易代码）每秒推送单个交易对的过去24小时滚动窗口标签统计信息。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-ticker-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#symbol-ticker-3" /></para>
             </summary>
             <param name="symbols">The symbols to subscribe to</param>
             <param name="onMessage">The event handler for the received data</param>
@@ -8571,7 +8898,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToAllTickerUpdatesAsync(System.Action{CryptoExchange.Net.Sockets.DataEvent{System.Collections.Generic.IEnumerable{Binance.Net.Interfaces.IBinanceTick}}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to ticker updates stream for all symbols
+            全市场所有交易对的完整Ticker
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#all-market-tickers-stream" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#ticker" /></para>
             </summary>
             <param name="onMessage">The event handler for the received data</param>
             <param name="ct">Cancellation token for closing this subscription</param>
@@ -8580,7 +8909,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToAllBookTickerUpdatesAsync(System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamBookPrice}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to all book ticker update streams
+            全市场最优挂单信息 实时推送所有交易对最优挂单信息
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#all-book-tickers-stream" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#3a40b1071b" /></para>
             </summary>
             <param name="onMessage">The event handler for the received data</param>
             <param name="ct">Cancellation token for closing this subscription</param>
@@ -8589,7 +8920,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToBookTickerUpdatesAsync(System.String,System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamBookPrice}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the book ticker update stream for the provided symbol
+            按Symbol的最优挂单信息（指定单一交易代码） 实时推送指定交易对最优挂单信息
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-book-ticker-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#symbol" /></para>
             </summary>
             <param name="symbol">The symbol</param>
             <param name="onMessage">The event handler for the received data</param>
@@ -8599,7 +8932,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToBookTickerUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamBookPrice}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the book ticker update stream for the provided symbols
+            按Symbol的最优挂单信息（指定多个交易代码） 实时推送指定交易对最优挂单信息
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-book-ticker-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#symbol" /></para>
             </summary>
             <param name="symbols">The symbols</param>
             <param name="onMessage">The event handler for the received data</param>
@@ -8609,7 +8944,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToTradeUpdatesAsync(System.String,System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamTrade}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the trades update stream for the provided symbol
+            逐笔交易（指定单一交易代码） 逐笔交易推送每一笔成交的信息。成交，或者说交易的定义是仅有一个吃单者与一个挂单者相互交易
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#trade-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#2b149598d9" /></para>
             </summary>
             <param name="symbol">The symbol</param>
             <param name="onMessage">The event handler for the received data</param>
@@ -8619,7 +8956,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToTradeUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamTrade}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the trades update stream for the provided symbols
+            逐笔交易（指定多个交易代码） 逐笔交易推送每一笔成交的信息。成交，或者说交易的定义是仅有一个吃单者与一个挂单者相互交易
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#trade-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#2b149598d9" /></para>
             </summary>
             <param name="symbols">The symbols</param>
             <param name="onMessage">The event handler for the received data</param>
@@ -8629,7 +8968,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToPartialOrderBookUpdatesAsync(System.String,System.Int32,System.Nullable{System.Int32},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceOrderBook}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the depth updates for the provided symbol
+            有限档深度信息（指定单一交易代码） 每秒或每100毫秒推送有限档深度信息。levels表示几档买卖单信息, 可选 5/10/20档
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#partial-book-depth-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#6ae7c2b506" /></para>
             </summary>
             <param name="symbol">The symbol to subscribe on</param>
             <param name="levels">The amount of entries to be returned in the update</param>
@@ -8641,7 +8982,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToPartialOrderBookUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Nullable{System.Int32},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceOrderBook}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the depth updates for the provided symbols
+            有限档深度信息（指定多个交易代码） 每秒或每100毫秒推送有限档深度信息。levels表示几档买卖单信息, 可选 5/10/20档
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#partial-book-depth-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#6ae7c2b506" /></para>
             </summary>
             <param name="symbols">The symbols to subscribe on</param>
             <param name="levels">The amount of entries to be returned in the update of each symbol</param>
@@ -8653,7 +8996,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToOrderBookUpdatesAsync(System.String,System.Nullable{System.Int32},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceEventOrderBook}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the order book updates for the provided symbol
+            增量深度信息（指定单一交易代码） 每秒或每100毫秒推送orderbook的变化部分(如果有)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#diff-depth-stream" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#1654ad2dd2" /></para>
             </summary>
             <param name="symbol">The symbol</param>
             <param name="updateInterval">Update interval in milliseconds</param>
@@ -8664,7 +9009,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToOrderBookUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int32},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceEventOrderBook}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the depth update stream for the provided symbols
+            增量深度信息（指定多个交易代码） 每秒或每100毫秒推送orderbook的变化部分(如果有)
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#diff-depth-stream" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#1654ad2dd2" /></para>
             </summary>
             <param name="symbols">The symbols</param>
             <param name="updateInterval">Update interval in milliseconds</param>
@@ -8675,7 +9022,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToUserDataUpdatesAsync(System.String,System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamOrderUpdate}},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamOrderList}},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamPositionsUpdate}},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamBalanceUpdate}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the account update stream. Prior to using this, the BinanceClient.Spot.UserStreams.StartUserStream method should be called.
+            生成 Listen Key (USER_STREAM) 开始一个新的数据流。除非发送 keepalive，否则数据流于60分钟后关闭。如果该帐户具有有效的listenKey，则将返回该listenKey并将其有效期延长60分钟。
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#user-data-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#listen-key" /></para>
             </summary>
             <param name="listenKey">Listen key retrieved by the StartUserStream method</param>
             <param name="onOrderUpdateMessage">The event handler for whenever an order status update is received</param>
@@ -8688,7 +9037,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToBlvtInfoUpdatesAsync(System.String,System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Blvt.BinanceBlvtInfoUpdate}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to leveraged token info updates
+            Websocket 杠杆代币信息更新（指定单一交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/futures/en/#blvt-info-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#websocket-3" /></para>
             </summary>
             <param name="token">The token to subscribe to</param>
             <param name="onMessage">The event handler for the received data</param>
@@ -8698,7 +9049,10 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToBlvtInfoUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Blvt.BinanceBlvtInfoUpdate}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to leveraged token info updates
+            Websocket 杠杆代币信息更新（指定多个交易代码）
+            Websocket 
             <para><a href="https://binance-docs.github.io/apidocs/futures/en/#blvt-info-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#websocket-3" /></para>
             </summary>
             <param name="tokens">The tokens to subscribe to</param>
             <param name="onMessage">The event handler for the received data</param>
@@ -8708,7 +9062,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToBlvtKlineUpdatesAsync(System.String,Binance.Net.Enums.KlineInterval,System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamKlineData}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to leveraged token kline updates
+            Websocket 杠杆代币净值K线更新（指定单一交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/futures/en/#blvt-nav-kline-candlestick-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#websocket-k" /></para>
             </summary>
             <param name="token">The token to subscribe to</param>
             <param name="interval">The kline interval</param>
@@ -8719,7 +9075,9 @@
         <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceSocketClientSpotStreams.SubscribeToBlvtKlineUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},Binance.Net.Enums.KlineInterval,System.Action{CryptoExchange.Net.Sockets.DataEvent{Binance.Net.Objects.Models.Spot.Socket.BinanceStreamKlineData}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to leveraged token kline updates
+            Websocket 杠杆代币净值K线更新（指定多个交易代码）
             <para><a href="https://binance-docs.github.io/apidocs/futures/en/#blvt-nav-kline-candlestick-streams" /></para>
+            <para><a href="https://binance-docs.github.io/apidocs/spot/cn/#websocket-k" /></para>
             </summary>
             <param name="tokens">The tokens to subscribe to</param>
             <param name="interval">The kline interval</param>
