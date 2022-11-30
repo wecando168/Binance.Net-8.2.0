@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Binance.Net.Objects.Models.Spot.Socket;
 using Binance.Net.Objects.Models.Spot.Blvt;
+using CryptoExchange.Net.Interfaces;
 
 namespace Binance.Net.Interfaces.Clients.SpotApi
 {
@@ -15,6 +16,11 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
     /// </summary>
     public interface IBinanceSocketClientSpotStreams : IDisposable
     {
+        /// <summary>
+        /// The factory for creating sockets. Used for unit testing
+        /// </summary>
+        IWebsocketFactory SocketFactory { get; set; }
+
         /// <summary>
         /// Subscribes to the aggregated trades update stream for the provided symbol
         /// 归集交易流（指定单一交易代码） 归集交易 stream 推送交易信息，是对单一订单的集合。
