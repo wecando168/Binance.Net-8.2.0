@@ -12,8 +12,11 @@ namespace Binance.Net
         public BinanceAuthenticationProvider(ApiCredentials credentials) : base(credentials)
         {
         }
-
-        public override void MexcV3AuthenticateRequest(RestApiClient apiClient, Uri uri, HttpMethod method, Dictionary<string, object> providedParameters, bool auth, ArrayParametersSerialization arraySerialization, HttpMethodParameterPosition parameterPosition, out Dictionary<string, object> uriParameters, out Dictionary<string, object> bodyParameters, out Dictionary<string, string> headers)
+        
+        /// <summary>
+        /// 这是一个不做字典排序的签名方法，这里不需要实现，币安是要求排序的
+        /// </summary>
+        public override void AuthenticateRequest(RestApiClient apiClient, Uri uri, HttpMethod method, Dictionary<string, object> providedParameters, bool auth, ArrayParametersSerialization arraySerialization, HttpMethodParameterPosition parameterPosition, out Dictionary<string, object> uriParameters, out Dictionary<string, object> bodyParameters, out Dictionary<string, string> headers)
         {
             throw new NotImplementedException();
         }

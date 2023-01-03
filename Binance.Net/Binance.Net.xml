@@ -4,6 +4,11 @@
         <name>Binance.Net</name>
     </assembly>
     <members>
+        <member name="M:Binance.Net.BinanceAuthenticationProvider.AuthenticateRequest(CryptoExchange.Net.RestApiClient,System.Uri,System.Net.Http.HttpMethod,System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean,CryptoExchange.Net.Objects.ArrayParametersSerialization,CryptoExchange.Net.Objects.HttpMethodParameterPosition,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.Collections.Generic.Dictionary{System.String,System.String}@)">
+            <summary>
+            这是一个不做字典排序的签名方法，这里不需要实现，币安是要求排序的
+            </summary>
+        </member>
         <member name="T:Binance.Net.BinanceHelpers">
             <summary>
             Helper methods for the Binance API
