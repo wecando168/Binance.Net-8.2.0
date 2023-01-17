@@ -178,7 +178,7 @@ namespace Binance.Net.UnitTests
             // act
             var headers = new Dictionary<string, string>();
             authProvider.AuthenticateRequest(null, request.Uri, HttpMethod.Get, new Dictionary<string, object>(), true, ArrayParametersSerialization.MultipleValues,
-                HttpMethodParameterPosition.InUri, out var uriParameters, out var bodyParameters, out headers);
+                HttpMethodParameterPosition.InUri, out SortedDictionary<string, object> uriParameters, out SortedDictionary<string, object> bodyParameters, out headers);
 
             // assert
             Assert.IsTrue(headers.First().Key == "X-MBX-APIKEY" && headers.First().Value == "TestKey");
