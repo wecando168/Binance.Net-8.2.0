@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleClient", "Examples\C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoExchange.Net", "..\CryptoExchange.Net-5.3.1\CryptoExchange.Net\CryptoExchange.Net.csproj", "{8CEF75CB-81C2-47A7-8CBE-0AF64BB9B68E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo_BinanceNetCore", "Examples\BinanceNetCoreDemo\Demo_BinanceNetCore.csproj", "{DEE96D84-8FFD-4A6D-96D2-C9EF492D275E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfClient", "Examples\WpfClient\WpfClient.csproj", "{2FF7BA6E-AE39-4A61-B57A-6C25F373CF4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{8CEF75CB-81C2-47A7-8CBE-0AF64BB9B68E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CEF75CB-81C2-47A7-8CBE-0AF64BB9B68E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CEF75CB-81C2-47A7-8CBE-0AF64BB9B68E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEE96D84-8FFD-4A6D-96D2-C9EF492D275E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEE96D84-8FFD-4A6D-96D2-C9EF492D275E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEE96D84-8FFD-4A6D-96D2-C9EF492D275E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEE96D84-8FFD-4A6D-96D2-C9EF492D275E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FF7BA6E-AE39-4A61-B57A-6C25F373CF4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FF7BA6E-AE39-4A61-B57A-6C25F373CF4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FF7BA6E-AE39-4A61-B57A-6C25F373CF4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FF7BA6E-AE39-4A61-B57A-6C25F373CF4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
